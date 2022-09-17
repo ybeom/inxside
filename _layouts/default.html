@@ -1,0 +1,21 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <mata name="viewport" content="width=device-width,initial-scale=1.0" />
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+        <!-- site title setting -->
+        <title>{{site.title}}{{site.title_separator}}{{site.subtitle}}</title>
+        <!-- javasctipt -->
+        {% if site.head_scripts %} {% for script in site.head_scripts %}
+        <script src="{{ script | relative_url }}"></script>
+        {% endfor %} {% endif %}
+    </head>
+    <body>
+        <div class="container"></div>
+    </body>
+</html>
