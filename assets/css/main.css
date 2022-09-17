@@ -1,3 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container {
+    width: 100%;
+    height: 100%;
     background-color: #fdf1d7;
+}
+
+.main-container {
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 0 auto;
+}
+.home-page-wrap {
+    width: 100%;
+    height: 100%;
+}
+.poster-image-container {
+    width: 850px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.poster-image-container .home-poster {
+    width: 100%;
+    height: 100%;
+}
+.poster-image-container .step-image {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+}
+.poster-image-container .step-1 {
+    opacity: 0;
+    animation: step1 12s ease-in-out infinite;
+}
+.poster-image-container .step-2 {
+    opacity: 0;
+    animation: step2 12s ease-in-out infinite;
+}
+.poster-image-container .step-3 {
+    opacity: 0;
+    animation: step3 12s ease-in-out infinite;
+}
+.poster-image-container .step-4 {
+    opacity: 0;
+    animation: step4 12s ease-in-out infinite;
+}
+.poster-image-container .step-5 {
+    opacity: 0;
+    animation: step5 12s ease-in-out infinite;
+}
+.poster-image-container .step-6 {
+    opacity: 0;
+    animation: step6 12s ease-in-out infinite;
+}
+.poster-image-container .step-1::after {
+    animation: blurout 1s 2s;
+}
+@keyframes step1 {
+    from {
+        opacity: 0;
+    }
+    14.2% {
+        opacity: 1;
+    }
+    28.4% {
+        opacity: 0;
+    }
+    42.6% {
+        opacity: 0;
+    }
+    56.8% {
+        opacity: 0;
+    }
+    71% {
+        opacity: 0;
+    }
+    85.2% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes step2 {
+    from {
+        opacity: 0;
+    }
+    14.2% {
+        opacity: 0;
+    }
+    28.4% {
+        opacity: 1;
+    }
+    42.6% {
+        opacity: 0;
+    }
+    56.8% {
+        opacity: 0;
+    }
+    71% {
+        opacity: 0;
+    }
+    85.2% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes step3 {
+    from {
+        opacity: 0;
+    }
+    14.2% {
+        opacity: 0;
+    }
+    28.4% {
+        opacity: 0;
+    }
+    42.6% {
+        opacity: 1;
+    }
+    56.8% {
+        opacity: 0;
+    }
+    71% {
+        opacity: 0;
+    }
+    85.2% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes step4 {
+    from {
+        opacity: 0;
+    }
+    14.2% {
+        opacity: 0;
+    }
+    28.4% {
+        opacity: 0;
+    }
+    42.6% {
+        opacity: 0;
+    }
+    56.8% {
+        opacity: 1;
+    }
+    71% {
+        opacity: 0;
+    }
+    85.2% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes step5 {
+    from {
+        opacity: 0;
+    }
+    14.2% {
+        opacity: 0;
+    }
+    28.4% {
+        opacity: 0;
+    }
+    42.6% {
+        opacity: 0;
+    }
+    56.8% {
+        opacity: 0;
+    }
+    71% {
+        opacity: 1;
+    }
+    85.2% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes step6 {
+    from {
+        opacity: 0;
+    }
+    14.2% {
+        opacity: 0;
+    }
+    28.4% {
+        opacity: 0;
+    }
+    42.6% {
+        opacity: 0;
+    }
+    56.8% {
+        opacity: 0;
+    }
+    71% {
+        opacity: 0;
+    }
+    85.2% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

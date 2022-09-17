@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <mata name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <!-- stylesheet -->
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
         <!-- site title setting -->
@@ -16,6 +16,8 @@
         {% endfor %} {% endif %}
     </head>
     <body>
-        <div class="container"></div>
+        <div class="container">
+            <main class="main-container">{{content}}</main>
+        </div>
     </body>
 </html>

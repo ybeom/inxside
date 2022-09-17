@@ -8,7 +8,7 @@
 # in the templates via {{ site.myvariable }}.
 title: "마음 창고"
 title_separator: "-"
-subtitle: "2022.9.24~2022.09.27, 목포 집에서""
+subtitle: "2022.9.24~2022.09.27, 목포 집에서"
 email: inaexjoy@gmail.com
 name: "이응(인애)"
 description: "마음 창고가 꽉 차서 아무것도 담을 수 없을 때마다 표현한 것들을 한데 모은 마음 창고에 초대한다"
@@ -24,7 +24,7 @@ plugins:
 author:
     name: "이응(최인애)"
     # avator: /assets/images/yb_avator.png
-    # bio: 
+    # bio:
     email: "inaexjoy@gmail.com"
 
 # 리딩 파일 리소스
