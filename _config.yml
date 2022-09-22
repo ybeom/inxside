@@ -39,6 +39,12 @@ sass:
     sass_dir: _sass
     style: compressed
 
+default:
+    - scope:
+          path: "assets/images"
+      values:
+          image: true
+
 #rendering output options
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
