@@ -13,6 +13,7 @@ email: inaexjoy@gmail.com
 name: "이응(인애)"
 description: "마음 창고가 꽉 차서 아무것도 담을 수 없을 때마다 표현한 것들을 한데 모은 마음 창고에 초대한다"
 url: "https://ybeom.github.io/inxside"
+baseurl: "/inxside"
 locale: "ko-KR"
 
 # Build settings
