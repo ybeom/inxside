@@ -1,26 +1,45 @@
 ---
-layout: default
 ---
 
-<div class="home-page-wrap">
-    <div class="poster-image-container">
-        <img class="home-poster" src="assets/images/home_poster.png" alt="전시 포스터" />
-        <img class="step-image step-1" src="assets/images/inxside_step_1.PNG" alt="발자국 1" />
-        <img class="step-image step-2" src="assets/images/inxside_step_2.PNG" alt="발자국 2" />
-        <img class="step-image step-3" src="assets/images/inxside_step_3.PNG" alt="발자국 3" />
-        <img class="step-image step-4" src="assets/images/inxside_step_4.PNG" alt="발자국 4" />
-        <img class="step-image step-5" src="assets/images/inxside_step_5.PNG" alt="발자국 5" />
-        <img class="step-image step-6" src="assets/images/inxside_step_6.PNG" alt="발자국 6" />
-        <div class="poster-door">
-            <div class="poster-door-handle"></div>
-            <img src="assets/images/home_poster.png" alt="문 색상" />
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+        <!-- site title setting -->
+        <title>{{site.title}}{{site.title_separator}}{{site.subtitle}}</title>
+        <!-- javasctipt -->
+        {% if site.head_scripts %} {% for script in site.head_scripts %}
+        <script src="{{ script | relative_url }}"></script>
+        {% endfor %} {% endif %}
+    </head>
+    <body>
+        <div class="home-container">
+            <main class="main-container">
+                <div class="home-page-wrap">
+                    <div class="poster-image-container">
+                        <img class="home-poster" src="assets/images/home_poster.png" alt="전시 포스터" />
+                        <img class="step-image step-1" src="assets/images/inxside_step_1.PNG" alt="발자국 1" />
+                        <img class="step-image step-2" src="assets/images/inxside_step_2.PNG" alt="발자국 2" />
+                        <img class="step-image step-3" src="assets/images/inxside_step_3.PNG" alt="발자국 3" />
+                        <img class="step-image step-4" src="assets/images/inxside_step_4.PNG" alt="발자국 4" />
+                        <img class="step-image step-5" src="assets/images/inxside_step_5.PNG" alt="발자국 5" />
+                        <img class="step-image step-6" src="assets/images/inxside_step_6.PNG" alt="발자국 6" />
+                        <div class="poster-door">
+                            <div class="poster-door-handle"></div>
+                            <img src="assets/images/home_poster.png" alt="문 색상" />
+                        </div>
+                        <div class="door-inside">
+                            <a href="/loadmap">
+                                <img src="assets/images/art_1.JPG" />
+                                <div>👆</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-        <div class="door-inside">
-            <a>
-                <img src="assets/images/art_1.JPG" />
-                <div>👆</div>
-                <div><strong>Click!</strong></div>
-            </a>
-        </div>
-    </div>
-</div>
+    </body>
+</html>
