@@ -11,13 +11,11 @@
         <!-- site title setting -->
         <title>{{site.title}}{{site.title_separator}}{{site.subtitle}}</title>
         <!-- javasctipt -->
-        {% if site.head_scripts %} {% for script in site.head_scripts %}
-        <script src="{{ script | relative_url }}"></script>
-        {% endfor %} {% endif %}
     </head>
     <body>
         <div class="container">
             <main class="main-container">{{content}}</main>
         </div>
+        <script src="{{'/assets/js/main.js'|relactive_url}}"></script>
     </body>
 </html>

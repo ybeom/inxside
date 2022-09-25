@@ -21,7 +21,7 @@ ul {
     background-color: #fdf1d7;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    align-items: center;
 }
 .home-container {
     width: 100%;
@@ -316,15 +316,7 @@ ul {
     height: 900px;
     margin-top: 50px;
     overflow: hidden;
-}
-.loadmap > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1200px;
-    height: 900px;
-    z-index: 10;
-    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 .loadmap-image {
     width: 1200px;
@@ -344,7 +336,15 @@ ul {
     height: 120px;
     z-index: 30;
 }
-
+.loadmap-image .route {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 900px;
+    z-index: 10;
+    overflow: hidden;
+}
 .loadmap-image > div:hover > a > img {
     animation: zoomImage 1s infinite ease-in-out;
 }
@@ -363,16 +363,16 @@ ul {
     }
 }
 .loadmap-image > .art-th-1 {
-    right: 165px;
-    bottom: 250px;
+    right: 150px;
+    bottom: 210px;
 }
 
 .loadmap-image > .art-th-2 {
-    right: 10px;
+    right: 50px;
     top: 200px;
 }
 .loadmap-image > .art-th-3 {
-    right: 10px;
+    right: 50px;
     top: 10px;
     transform: rotate(90deg);
 }
@@ -390,25 +390,25 @@ ul {
 }
 .loadmap-image > .art-th-7 {
     left: 40px;
-    bottom: 20px;
+    bottom: 50px;
 }
 .loadmap-image > .art-th-8 {
-    left: 500px;
-    bottom: 20px;
+    left: 450px;
+    bottom: 50px;
 }
 .loadmap-image > .wall-1 {
     position: absolute;
-    width: 40px;
+    width: 25px;
     height: 200px;
     border: 1px #e6dbc3 solid;
     background-color: #e6dbc3;
-    right: 300px;
+    right: 400px;
     bottom: 0;
 }
 .loadmap-image > .wall-2 {
     position: absolute;
     width: 150px;
-    height: 40px;
+    height: 25px;
     border: 1px #e6dbc3 solid;
     background-color: #e6dbc3;
     right: 150px;
@@ -425,7 +425,7 @@ ul {
 } */
 .loadmap-image > .wall-4 {
     position: absolute;
-    width: 40px;
+    width: 25px;
     height: 60px;
     border: 1px #e6dbc3 solid;
     background-color: #e6dbc3;
@@ -434,8 +434,8 @@ ul {
 }
 .loadmap-image > .wall-5 {
     position: absolute;
-    width: 40px;
-    height: 100px;
+    width: 25px;
+    height: 85px;
     border: 1px #e6dbc3 solid;
     background-color: #e6dbc3;
     right: 400px;
@@ -444,7 +444,7 @@ ul {
 .loadmap-image > .wall-6 {
     position: absolute;
     width: 600px;
-    height: 40px;
+    height: 25px;
     border: 1px #e6dbc3 solid;
     background-color: #e6dbc3;
     right: 400px;
@@ -452,8 +452,8 @@ ul {
 }
 .loadmap-image > .wall-7 {
     position: absolute;
-    width: 40px;
-    height: 300px;
+    width: 25px;
+    height: 235px;
     border: 1px #e6dbc3 solid;
     background-color: #e6dbc3;
     left: 190px;
@@ -461,8 +461,8 @@ ul {
 }
 .loadmap-image > .wall-8 {
     position: absolute;
-    width: 40px;
-    height: 500px;
+    width: 25px;
+    height: 400px;
     border: 1px #e6dbc3 solid;
     background-color: #e6dbc3;
     left: 190px;
@@ -498,7 +498,7 @@ ul {
 
 @media (max-width: 1280px) {
     .main-container {
-        max-width: 768px;
+        max-width: 600px;
     }
     .container {
         padding: 0;
@@ -507,20 +507,20 @@ ul {
         width: 100%;
     }
     .poster-image-container .poster-door {
-        left: 300px;
-        top: 380px;
-        width: 140px;
-        height: 186px;
+        left: 255px;
+        top: 323px;
+        width: 90px;
+        height: 120px;
     }
     .poster-image-container .poster-door img {
         left: -340px;
         top: -430px;
     }
     .poster-image-container .door-inside {
-        left: 300px;
-        top: 380px;
-        width: 140px;
-        height: 186px;
+        left: 255px;
+        top: 323px;
+        width: 90px;
+        height: 120px;
     }
     .poster-image-container .door-inside a {
         padding: 30px 10px 10px 10px;
@@ -529,23 +529,28 @@ ul {
         width: 12px;
         height: 12px;
         left: 15px;
-        top: 80px;
+        top: 60px;
     }
-
+    .nav-container .nav-item {
+        margin-right: 20px;
+    }
     .loadmap {
-        width: 768px;
+        width: 600px;
+        margin: 10px 0;
     }
-    .loadmap > img {
-        left: -432px;
+    .loadmap-image .route {
+        left: 0;
     }
     .loadmap-image {
-        left: -432px;
+        left: -600px;
+        z-index: 100;
+        margin: 0 auto;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .main-container {
-        max-width: 375px;
+        max-width: 320px;
     }
     .container {
         padding: 0;
@@ -554,14 +559,14 @@ ul {
         width: 100%;
     }
     .poster-image-container .poster-door {
-        left: 160px;
-        top: 197px;
+        left: 132px;
+        top: 156px;
         width: 60px;
         height: 80px;
     }
     .poster-image-container .door-inside {
-        left: 160px;
-        top: 197px;
+        left: 132px;
+        top: 156px;
         width: 60px;
         height: 80px;
     }
@@ -575,25 +580,96 @@ ul {
         left: 10px;
         top: 38px;
     }
+    .main-header {
+        height: 80px;
+    }
     .nav-wrap {
-        padding: 0 20px;
+        padding: 0 15px;
     }
     .nav-container .nav-item {
-        margin-right: 10px;
+        margin-right: 8px;
     }
     .nav-container .nav-item a {
-        font-size: 20px;
+        font-size: 18px;
     }
     .author-contact a {
-        font-size: 20px;
+        font-size: 18px;
     }
     .loadmap {
-        width: 375px;
+        width: 320px;
+        height: 100%;
     }
-    .loadmap > img {
-        left: -825px;
+    .loadmap-image .route {
+        width: 960px;
+        height: 720px;
+        left: 0;
     }
     .loadmap-image {
-        left: -825px;
+        left: -640px;
+        width: 960px;
+        height: 720px;
+    }
+    .loadmap-image > .art-th-1 {
+        right: 150px;
+        bottom: 180px;
+    }
+
+    .loadmap-image > .art-th-2 {
+        right: 50px;
+        top: 200px;
+    }
+    .loadmap-image > .art-th-3 {
+        right: 50px;
+        top: 10px;
+    }
+    .loadmap-image > .art-th-4 {
+        left: 350px;
+        top: 40px;
+    }
+    .loadmap-image > .art-th-5 {
+        left: 350px;
+        top: 270px;
+    }
+    .loadmap-image > .art-th-6 {
+        left: 200px;
+        top: 280px;
+    }
+    .loadmap-image > .art-th-7 {
+        left: 40px;
+        bottom: 20px;
+    }
+    .loadmap-image > .art-th-8 {
+        left: 350px;
+        bottom: 20px;
+    }
+    .loadmap-image > .wall-1 {
+        width: 25px;
+        height: 200px;
+        right: 400px;
+        bottom: 0;
+    }
+    .loadmap-image > .wall-2 {
+        width: 150px;
+        height: 25px;
+        right: 150px;
+        bottom: 300px;
+    }
+    .loadmap-image > .wall-6 {
+        width: 350px;
+        height: 25px;
+        right: 400px;
+        top: 210px;
+    }
+    .loadmap-image > .wall-7 {
+        width: 25px;
+        height: 235px;
+        left: 190px;
+        top: 0;
+    }
+    .loadmap-image > .wall-8 {
+        width: 25px;
+        height: 250px;
+        left: 190px;
+        bottom: 0;
     }
 }
