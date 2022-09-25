@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="art-index-wrap">
+    <div class="art-image">
+        {% for image in site.static_files %} {% if image.path contains "assets/images" %}{% if image.path contains page.fileName %}
+        <img src="{{ image.path | relative_url}}" />
+        {% endif%} {% endif %} {% endfor %}
+    </div>
+    <div class="art-content">
+        <div class="art-summary-content">
+            <ul>
+                <p>작품정보</p>
+                <li>{{page.info.title}}</li>
+                <li>{{page.info.material}}</li>
+                <li>{{page.info.size}}</li>
+            </ul>
+            <ul>
+                <p>작가</p>
+                <li>{{page.author}}</li>
+            </ul>
+        </div>
+        <div class="art-detail-content">{{content}}</div>
+    </div>
+    <div class="other-arts">
+        <div class="prev-btn"><a>이전 작품</a></div>
+        <div class="next-btn"><a>다음 작품</a></div>
+    </div>
+    {% include commentForm.html%}
+</div>

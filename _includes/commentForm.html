@@ -1,0 +1,45 @@
+<div class="comment-wrap">
+    <form id="comment-form" method="post" action="{{ site.staticman.baseUrl }}/v3/entry/github/{{site.staticman.userName}}/{{ site.staticman.repository }}/{{ site.staticman.branch }}/comments">
+        <fieldset>
+            <label for="comment-form-message">Comment</label>
+            <textarea type="text" rows="3" id="comment-form-message" name="fields[message]"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="comment-form-name">Name</label>
+            <input type="text" id="comment-form-name" name="fields[name]" />
+        </fieldset>
+        <fieldset>
+            <label for="comment-form-email">Email address</label>
+            <input type="email" id="comment-form-email" name="fields[email]" />
+        </fieldset>
+        <fieldset class="hidden" style="display: none">
+            <!-- used by Staticman to generate filenames for each comment -->
+            <input type="hidden" name="options[slug]" value="{{ page.slug }}" />
+            <!-- honey pot used to filter out spam -->
+            <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+            <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off" />
+        </fieldset>
+        <fieldset>
+            <button type="submit" id="comment-form-submit">Submit Comment</button>
+        </fieldset>
+    </form>
+</div>
+
+<!-- <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = "https://ybeom.github.io/inxside/{{page.url}}"; // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement("script");
+        s.src = "https://inxside.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->

@@ -14,7 +14,10 @@
     </head>
     <body>
         <div class="container">
+            {% include header.html %}
+
             <main class="main-container">{{content}}</main>
+            {% include footer.html %}
         </div>
         <script src="{{'/assets/js/main.js'|relactive_url}}"></script>
     </body>
