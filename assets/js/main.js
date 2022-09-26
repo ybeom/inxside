@@ -50,3 +50,23 @@ if (window.innerWidth < 1280) {
         }
     }
 }
+
+//코멘트 폼 관련
+const feelingBtnEl = document.querySelector(".comment-feeling-buttons-wrap");
+const feelingInput = document.querySelector("#comment-form-feeling");
+console.dir(feelingInput);
+
+[].forEach.call(feelingBtnEl.children, function (el) {
+    el.addEventListener("click", function (e) {
+        console.log(e);
+        //기존 클릭된 속성 제거
+        const feelingButtons = document.querySelectorAll(".comment-feeling-buttons-wrap button");
+        [].forEach.call(feelingButtons, function (el) {
+            el.classList.remove("clicked");
+            feelingInput.value = "";
+        });
+        //새롭게 속성 추가
+        e.target.classList.add("clicked");
+        feelingInput.value = e.target.value;
+    });
+});

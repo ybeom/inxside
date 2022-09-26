@@ -1,10 +1,10 @@
 comments:
-    allowedFields: ["name", "email", "message"]
+    allowedFields: ["name", "email", "message", "feeling"]
     branch: "main"
     commitMessage: "New comment."
     filename: comment-{@timestamp}
     format: "yml"
-    moderation: true
+    moderation: false
     path: "_data/comments/{options.slug}"
     requiredFields: ["name", "email", "message"]
     transforms:

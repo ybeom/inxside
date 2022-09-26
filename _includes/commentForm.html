@@ -1,27 +1,44 @@
 <div class="comment-wrap">
     <form id="comment-form" method="post" action="{{ site.staticman.baseUrl }}/v3/entry/github/{{site.staticman.userName}}/{{ site.staticman.repository }}/{{ site.staticman.branch }}/comments">
-        <fieldset>
-            <label for="comment-form-message">Comment</label>
-            <textarea type="text" rows="3" id="comment-form-message" name="fields[message]"></textarea>
-        </fieldset>
-        <fieldset>
-            <label for="comment-form-name">Name</label>
-            <input type="text" id="comment-form-name" name="fields[name]" />
-        </fieldset>
-        <fieldset>
-            <label for="comment-form-email">Email address</label>
-            <input type="email" id="comment-form-email" name="fields[email]" />
-        </fieldset>
-        <fieldset class="hidden" style="display: none">
-            <!-- used by Staticman to generate filenames for each comment -->
-            <input type="hidden" name="options[slug]" value="{{ page.slug }}" />
-            <!-- honey pot used to filter out spam -->
-            <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
-            <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off" />
-        </fieldset>
-        <fieldset>
-            <button type="submit" id="comment-form-submit">Submit Comment</button>
-        </fieldset>
+        <div class="comment-feeling-form">
+            <h3>작품을 보며 어떤 감정이 들었나요?</h3>
+            <div class="comment-feeling-buttons-wrap">
+                <button type="button" value="comfortable" class="comfortable">편안해</button>
+                <button type="button" value="interest" class="interest">흥미로워</button>
+                <button type="button" value="excited" class="excited">놀라워</button>
+                <button type="button" value="sad" class="sad">슬퍼</button>
+                <button type="button" value="lonely" class="lonely">외로워</button>
+                <button type="button" value="afraid" class="afraid">두려워</button>
+                <input type="hidden" id="comment-form-feeling" name="fields[feeling]" />
+            </div>
+        </div>
+        <div class="comment-contents-form">
+            <div>
+                <div class="commenter-info">
+                    <div>
+                        <label for="comment-form-name"><h5>이름</h5></label>
+                        <input type="text" id="comment-form-name" name="fields[name]" />
+                    </div>
+                    <div>
+                        <label for="comment-form-email"><h5>이메일</h5></label>
+                        <input type="email" id="comment-form-email" name="fields[email]" />
+                    </div>
+                    <div class="hidden" style="display: none">
+                        <!-- used by Staticman to generate filenames for each comment -->
+                        <input type="hidden" name="options[slug]" value="{{ page.slug }}" />
+                        <!-- honey pot used to filter out spam -->
+                        <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                        <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" placeholder="남기고 싶은 감정이나 생각을 자유롭게 적어주세요."></textarea>
+                <div>
+                    <button type="submit" id="comment-form-submit">남기기</button>
+                </div>
+            </div>
+        </div>
     </form>
 </div>
 
