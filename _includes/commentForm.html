@@ -17,14 +17,16 @@
                 <div class="commenter-info">
                     <div>
                         <label for="comment-form-name"><h5>이름</h5></label>
-                        <input type="text" id="comment-form-name" name="fields[name]" />
+                        <input type="text" id="comment-form-name" name="fields[name]" required />
                     </div>
                     <div>
                         <label for="comment-form-email"><h5>이메일</h5></label>
-                        <input type="email" id="comment-form-email" name="fields[email]" />
+                        <input type="email" id="comment-form-email" name="fields[email]" required />
                     </div>
                     <div class="hidden" style="display: none">
                         <!-- used by Staticman to generate filenames for each comment -->
+                        <input type="hidden" name="options[redirect]" value="{{site.url}}/art/{{page.slug}}" />
+
                         <input type="hidden" name="options[slug]" value="{{ page.slug }}" />
                         <!-- honey pot used to filter out spam -->
                         <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
@@ -33,7 +35,7 @@
                 </div>
             </div>
             <div>
-                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" placeholder="남기고 싶은 감정이나 생각을 자유롭게 적어주세요."></textarea>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" placeholder="남기고 싶은 감정이나 생각을 자유롭게 적어주세요." required></textarea>
                 <div>
                     <button type="submit" id="comment-form-submit">남기기</button>
                 </div>

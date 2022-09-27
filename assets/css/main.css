@@ -613,6 +613,24 @@ fieldset {
 .afraid {
     background-color: #c42a2f;
 }
+.comfortable:hover {
+    opacity: 0.8;
+}
+.interest:hover {
+    opacity: 0.8;
+}
+.excited:hover {
+    opacity: 0.8;
+}
+.sad:hover {
+    opacity: 0.8;
+}
+.lonely:hover {
+    opacity: 0.8;
+}
+.afraid:hover {
+    opacity: 0.8;
+}
 .comment-contents-form {
     flex: 3;
     width: 100%;
@@ -666,8 +684,18 @@ fieldset {
     font-weight: 600;
     margin-top: 30px;
 }
+.comment-contents-form div:last-child > div > button:hover {
+    background-color: #eac881;
+    font-weight: 700;
+    text-decoration: underline;
+}
 .clicked {
     opacity: 0.5;
+}
+.art-comments-wrap {
+    margin-top: 50px;
+    border: 3px solid #eac881;
+    padding: 50px;
 }
 
 @media (max-width: 1280px) {

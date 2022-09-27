@@ -10,7 +10,6 @@ if (window.innerWidth < 1280) {
     }
 
     let curPos = maxPos;
-    console.log(curPos);
     const loadmapImage = document.querySelector(".loadmap-image");
     loadmapImage.addEventListener("touchstart", touch_start);
     loadmapImage.addEventListener("touchend", touch_end);
@@ -54,11 +53,9 @@ if (window.innerWidth < 1280) {
 //코멘트 폼 관련
 const feelingBtnEl = document.querySelector(".comment-feeling-buttons-wrap");
 const feelingInput = document.querySelector("#comment-form-feeling");
-console.dir(feelingInput);
 
 [].forEach.call(feelingBtnEl.children, function (el) {
     el.addEventListener("click", function (e) {
-        console.log(e);
         //기존 클릭된 속성 제거
         const feelingButtons = document.querySelectorAll(".comment-feeling-buttons-wrap button");
         [].forEach.call(feelingButtons, function (el) {
