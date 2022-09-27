@@ -1,17 +1,22 @@
 <div class="art-comments-wrap">
-    {% assign comments = site.data.comments[page.slug]%} {% for comment in comments %} {{comment}}
+    {% assign comments = site.data.comments[page.slug]%} {% for comment in comments %}
     <div class="art-comment">
-        <div class="comment__content-wrapper">
-            <h3 class="comment__name">
-                {{comment[0]}}
+        <div class="art-comment-feeling">
+            <span class="{{comment[1].feeling}}-comment">{{comment[1].feeling}}</span>
+            <span>{{comments[page.slug]}}</span>
+        </div>
+        <div class="art-comment-message">
+            <span class="{{comment[1].feeling}}-message">{{comment[1].message}}</span>
+        </div>
+        <div class="art-commenter-info">
+            <div class="comment-name">
                 <span>{{comment[1].name}}</span>
-            </h3>
-            <div class="comment__date">
+            </div>
+            <div class="comment-date">
                 <a href="#comment1" itemprop="url">
                     <time>{{comment[1].date | date: "%Y년 %m월 %d일"}}</time>
                 </a>
             </div>
-            <div class="comment-message"><p>{{comment[1].message}}</p></div>
         </div>
     </div>
     {% endfor %}

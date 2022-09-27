@@ -562,10 +562,15 @@ fieldset {
 .other-arts .next-btn {
     float: right;
 }
-.comment-wrap {
-    margin-top: 250px;
+.comment-notice {
+    color: gray;
+    float: right;
+    font-size: 12px;
+}
+.comment-form-wrap {
     border: 3px #eac881 solid;
     padding: 50px;
+    margin-top: 250px;
 }
 #comment-form {
     display: flex;
@@ -696,6 +701,97 @@ fieldset {
     margin-top: 50px;
     border: 3px solid #eac881;
     padding: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+.art-comment {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+.art-comment-message {
+    padding: 40px;
+    margin: auto 0;
+    cursor: pointer;
+    background-color: transparent;
+    text-overflow: ellipsis;
+    line-height: 34px;
+}
+.art-comment-message span {
+    font-size: 30px;
+    text-align: justify;
+    font-weight: 300;
+    background-image: linear-gradient(180deg, transparent 0, #eac88190 0, #eac88190);
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 5px;
+    transition: background-size 0.2s ease, background-position 0.2s ease;
+}
+.art-comment-message span:hover {
+    background-size: 100% 34px;
+    background-position: left 0 bottom 0;
+    font-weight: 400;
+}
+.art-commenter-info {
+    width: 100%;
+}
+.art-commenter-info .comment-name {
+    float: left;
+    font-size: 12px;
+}
+.art-commenter-info .comment-date {
+    float: right;
+    font-size: 12px;
+}
+.comfortable-comment {
+    color: #178f3d;
+    font-weight: 600;
+}
+.interest-comment {
+    color: #ffd702;
+    font-weight: 600;
+}
+.excited-comment {
+    color: #018c82;
+    font-weight: 600;
+}
+.sad-comment {
+    color: #2e62a8;
+    font-weight: 600;
+}
+.lonely-comment {
+    color: #e68138;
+    font-weight: 600;
+}
+.afraid-comment {
+    color: #c42a2f;
+    font-weight: 600;
+}
+.comfortable-message {
+    background-image: linear-gradient(180deg, transparent 0, #178f3d90 0, #178f3d90) !important;
+}
+.interest-message {
+    background-image: linear-gradient(180deg, transparent 0, #ffd70290 0, #ffd70290) !important;
+}
+.excited-message {
+    background-image: linear-gradient(180deg, transparent 0, #018c8290 0, #018c8290) !important;
+}
+.sad-message {
+    background-image: linear-gradient(180deg, transparent 0, #2e62a890 0, #2e62a890) !important;
+}
+.lonely-message {
+    background-image: linear-gradient(180deg, transparent 0, #e6813890 0, #e6813890) !important;
+}
+.afraid-message {
+    background-image: linear-gradient(180deg, transparent 0, #c42a2f90 0, #c42a2f90) !important;
 }
 
 @media (max-width: 1280px) {
