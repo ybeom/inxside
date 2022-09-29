@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="gallery-container">
+    <div class="gallery-wrap">
+        <article class="gallery-overview">
+            <div class="gallery-logo"><img src="{{'/assets/images/logo.png' | relative_url }}" /></div>
+            <p>{{site.description}}<br /><strong>최인애</strong></p>
+        </article>
+        {% for post in site.posts%}
+        <a class="gallery-art-{{post.title}}" href="{{post.url | relative_url}}">
+            <article class="gallery-art-teaser" style="background-image: url('/assets/images/{{post.fileName}}')">
+                <div class="gallery-art-overlay"></div>
+                <h1>{{post.info.title}}</h1>
+                <p>{{post.info.material}}</p>
+                <p>{{post.info.size}}</p>
+            </article>
+        </a>
+        {% endfor %}
+    </div>
+</div>

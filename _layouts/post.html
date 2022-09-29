@@ -24,8 +24,11 @@ layout: default
         <div class="art-detail-content">{{content}}</div>
     </div>
     <div class="other-arts">
-        <div class="prev-btn"><a>이전 작품</a></div>
-        <div class="next-btn"><a>다음 작품</a></div>
+        {% unless page.previous == nill %}
+        <div class="prev-btn"><a href="{{page.previous.url | relative_url}}">이전 작품</a></div>
+        {% endunless %} {% unless page.next == nill %}
+        <div class="next-btn"><a href="{{page.next.url | relative_url}}">다음 작품</a></div>
+        {% endunless %}
     </div>
     {% include commentForm.html%} {% include comments.html%}
 </div>

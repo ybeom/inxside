@@ -53,17 +53,115 @@ if (window.innerWidth < 1280) {
 //코멘트 폼 관련
 const feelingBtnEl = document.querySelector(".comment-feeling-buttons-wrap");
 const feelingInput = document.querySelector("#comment-form-feeling");
-
-[].forEach.call(feelingBtnEl.children, function (el) {
-    el.addEventListener("click", function (e) {
-        //기존 클릭된 속성 제거
-        const feelingButtons = document.querySelectorAll(".comment-feeling-buttons-wrap button");
-        [].forEach.call(feelingButtons, function (el) {
-            el.classList.remove("clicked");
-            feelingInput.value = "";
+if (feelingInput) {
+    feelingInput.value = "just";
+}
+if (feelingBtnEl) {
+    [].forEach.call(feelingBtnEl.children, function (el) {
+        el.addEventListener("click", function (e) {
+            //기존 클릭된 속성 제거
+            const feelingButtons = document.querySelectorAll(".comment-feeling-buttons-wrap button");
+            [].forEach.call(feelingButtons, function (e) {
+                e.classList.remove("clicked");
+                feelingInput.value = "just";
+            });
+            //새롭게 속성 추가
+            e.target.classList.add("clicked");
+            feelingInput.value = e.target.value;
         });
-        //새롭게 속성 추가
-        e.target.classList.add("clicked");
-        feelingInput.value = e.target.value;
     });
-});
+}
+
+//갤러리 가로 스크롤
+const htmlEl = document.querySelector("html");
+const galleryContainerEl = document.querySelector(".gallery-container");
+const galleryWrapEl = document.querySelector(".gallery-wrap");
+const containerEl = document.querySelector(".container");
+
+if (galleryContainerEl) {
+    const sliderWidth = galleryWrapEl.offsetWidth;
+    let moveX = 0;
+    let moveY = 0;
+
+    htmlEl.addEventListener("wheel", function (e) {
+        moveY += e.deltaY;
+
+        if (moveY <= sliderWidth) {
+            moveX += e.deltaY;
+            galleryContainerEl.scrollLeft += e.deltaY;
+
+            containerEl.classList.add("container-fixed");
+
+            console.log("left: ", galleryContainerEl.scrollLeft);
+            console.log("top: ", htmlEl.scrollTop);
+        } else {
+            containerEl.classList.remove("container-fixed");
+        }
+    });
+}
+
+const feelingFilterEl = document.querySelector(".feeling-filter");
+
+if (feelingFilterEl) {
+    const artCommentEls = document.querySelectorAll(".art-comment");
+    const allFeelingBtnEl = document.querySelector(".all");
+
+    [].forEach.call(feelingFilterEl.children, function (el) {
+        el.addEventListener("click", (e) => {
+            if (e.target.classList.contains("all")) {
+                //button control
+                [].forEach.call(feelingFilterEl.children, (el) => {
+                    el.classList.add("unclicked");
+                });
+                e.target.classList.remove("unclicked");
+                //review card control
+                [].forEach.call(artCommentEls, (el) => {
+                    el.classList.remove("hidden");
+                });
+            } else if (e.target.classList.contains("unclicked")) {
+                //button control
+                e.target.classList.remove("unclicked");
+                //review card control
+                if (allFeelingBtnEl.classList.contains("unclicked")) {
+                    [].forEach.call(artCommentEls, (el) => {
+                        if (el.classList.contains(e.target.value)) {
+                            el.classList.remove("hidden");
+                        }
+                    });
+                } else {
+                    allFeelingBtnEl.classList.add("unclicked");
+                    [].forEach.call(artCommentEls, (el) => {
+                        if (!el.classList.contains(e.target.value)) {
+                            el.classList.add("hidden");
+                        }
+                    });
+                }
+            } else {
+                //button control
+                e.target.classList.add("unclicked");
+                //review card control
+                [].forEach.call(artCommentEls, (el) => {
+                    if (el.classList.contains(e.target.value)) {
+                        el.classList.add("hidden");
+                    }
+                });
+                let isAllHidden = true;
+                let isAllUnclicked = true;
+                [].forEach.call(artCommentEls, (el) => {
+                    isAllHidden = isAllHidden && el.classList.contains("hidden");
+                });
+                [].forEach.call(feelingFilterEl.children, (el) => {
+                    isAllUnclicked = isAllUnclicked && el.classList.contains("unclicked");
+                });
+                if (isAllHidden && isAllUnclicked) {
+                    //button control
+                    allFeelingBtnEl.classList.remove("unclicked");
+                    //review card control
+                    [].forEach.call(artCommentEls, (el) => {
+                        el.classList.remove("hidden");
+                    });
+                }
+            }
+        });
+    });
+}

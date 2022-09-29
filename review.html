@@ -1,0 +1,41 @@
+---
+layout: default
+feeling: [all, comfortable, interest, excited, sad, lonely, afraid]
+---
+
+<div class="review-container">
+    <div class="feeling-filter">
+        <button type="button" value="all" class="all">모든 감정</button>
+        <button type="button" value="comfortable" class="comfortable unclicked">편안해</button>
+        <button type="button" value="interest" class="interest unclicked">흥미로워</button>
+        <button type="button" value="excited" class="excited unclicked">놀라워</button>
+        <button type="button" value="sad" class="sad unclicked">슬퍼</button>
+        <button type="button" value="lonely" class="lonely unclicked">외로워</button>
+        <button type="button" value="afraid" class="afraid unclicked">두려워</button>
+    </div>
+    <div class="review-wrap">
+        {% for pageComments in site.data.comments %} {% for comment in pageComments[1]%} {% assign artUrl = "art/" | append: comment[1].art %}
+        <div class="art-comment {{comment[1].feeling}}">
+            <div class="art-comment-feeling">
+                <span class="{{comment[1].feeling}}-comment">{{comment[1].feeling}}</span>
+                <span class="art-number">작품_{{comment[1].art}}</span>
+            </div>
+            <div class="art-comment-message">
+                <a href="{{artUrl | relative_url}}">
+                    <span class="{{comment[1].feeling}}-message">{{comment[1].message}}</span>
+                </a>
+            </div>
+            <div class="art-commenter-info">
+                <div class="comment-name">
+                    <span>{{comment[1].name}}</span>
+                </div>
+                <div class="comment-date">
+                    <a href="#comment1" itemprop="url">
+                        <time>{{comment[1].date | date: "%Y년 %m월 %d일"}}</time>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %} {% endfor %}
+    </div>
+</div>
