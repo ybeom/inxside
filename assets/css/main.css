@@ -1057,6 +1057,29 @@ fieldset {
     .review-wrap > .art-comment {
         min-width: 200px;
     }
+    .container-fixed {
+        left: 0;
+        top: 0;
+    }
+    .gallery-container {
+        height: 100%;
+    }
+    .gallery-wrap {
+        flex-direction: column;
+        width: 100%;
+        padding: 30px;
+        position: relative;
+        align-items: center;
+    }
+    .gallery-wrap .gallery-overview {
+        margin-right: 0;
+    }
+    .gallery-wrap a .gallery-art-teaser {
+        justify-content: center;
+        margin-right: 0;
+        height: 300px;
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1266,5 +1289,14 @@ fieldset {
     }
     .review-wrap {
         margin-top: 0;
+    }
+    .gallery-wrap .gallery-overview {
+        width: 100%;
+    }
+    .gallery-wrap .gallery-overview .gallery-logo {
+        width: 100%;
+    }
+    .gallery-wrap a .gallery-art-teaser {
+        width: 250px;
     }
 }
