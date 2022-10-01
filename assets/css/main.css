@@ -23,6 +23,10 @@ a {
     text-decoration: none;
     color: black;
 }
+a:link {
+    text-decoration: none;
+    color: black;
+}
 li,
 ul {
     list-style: none;
@@ -608,11 +612,12 @@ fieldset {
     border-radius: 30px;
     cursor: pointer;
     margin-right: 20px;
+    opacity: 0.3;
 }
 .all {
     border: 3px solid #eac881;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 .comfortable {
     background-color: #178f3d;
@@ -712,7 +717,7 @@ fieldset {
     text-decoration: underline;
 }
 .clicked {
-    opacity: 0.5;
+    opacity: 1 !important;
 }
 .art-comments-container {
     display: flex;
@@ -939,6 +944,7 @@ fieldset {
     border-radius: 30px;
     cursor: pointer;
     margin-right: 20px;
+    opacity: 1;
 }
 .review-wrap {
     display: flex;
@@ -951,12 +957,15 @@ fieldset {
     display: none;
 }
 .unclicked {
-    opacity: 0.5;
+    opacity: 0.3 !important;
 }
 @media (max-width: 1280px) {
     .container {
         padding: 0;
         max-width: 600px;
+    }
+    .home-container {
+        margin-top: 50px;
     }
     .poster-image-container {
         width: 100%;
@@ -1048,9 +1057,9 @@ fieldset {
     .review-container {
         margin-top: 30px;
     }
-    .feeling-filter {
+    /* .feeling-filter {
         display: none;
-    }
+    } */
     .review-wrap {
         margin-top: 0;
     }
@@ -1085,29 +1094,35 @@ fieldset {
 @media (max-width: 700px) {
     .container {
         padding: 0;
+    }
+    .home-container {
+        margin-top: 130px;
+    }
+    .main-container {
         max-width: 320px;
     }
     .poster-image-container {
         width: 100%;
+        margin: auto;
     }
     .poster-image-container .poster-door {
-        left: 165px;
-        top: 208px;
-        width: 60px;
-        height: 80px;
+        left: 135px;
+        top: 170px;
+        width: 50px;
+        height: 66px;
     }
     .poster-image-container .door-inside {
-        left: 165px;
-        top: 208px;
-        width: 60px;
-        height: 80px;
+        left: 135px;
+        top: 170px;
+        width: 50px;
+        height: 66px;
     }
     .poster-image-container .door-inside a {
         padding: 10px;
     }
     .poster-image-container .poster-door .poster-door-handle {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
 
         left: 10px;
         top: 38px;
@@ -1125,7 +1140,7 @@ fieldset {
         margin-right: 20px;
     }
     .nav-container .nav-item img {
-        margin: 0 50px;
+        margin: 0 100px;
     }
     .nav-container .nav-item a {
         font-size: 18px;
@@ -1284,9 +1299,9 @@ fieldset {
     .review-container {
         margin-top: 30px;
     }
-    .feeling-filter {
+    /* .feeling-filter {
         display: none;
-    }
+    } */
     .review-wrap {
         margin-top: 0;
     }
