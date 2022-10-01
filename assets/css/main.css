@@ -27,8 +27,20 @@ a:link {
     text-decoration: none;
     color: black;
 }
-button {
+button,
+button:link,
+button:visited {
     color: black;
+}
+input,
+textarea,
+button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
 }
 li,
 ul {
