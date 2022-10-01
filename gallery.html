@@ -10,7 +10,8 @@ layout: default
         </article>
         {% for post in site.posts%}
         <a class="gallery-art-{{post.title}}" href="{{post.url | relative_url}}">
-            <article class="gallery-art-teaser" style="background-image: url('assets/images/{{post.fileName}}')">
+            {% assign teaserImage = 'assets/images/' | append: post.fileName %}
+            <article class="gallery-art-teaser" style="background-image: url('{{teaserImage | relative_url}}')">
                 <div class="gallery-art-overlay"></div>
                 <h1>{{post.info.title}}</h1>
                 <p>{{post.info.material}}</p>
