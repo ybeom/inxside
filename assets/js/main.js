@@ -55,9 +55,6 @@ if (loadmapImage) {
 //코멘트 폼 관련
 const feelingBtnEl = document.querySelector(".comment-feeling-buttons-wrap");
 const feelingInput = document.querySelector("#comment-form-feeling");
-if (feelingInput) {
-    feelingInput.value = "just";
-}
 if (feelingBtnEl) {
     [].forEach.call(feelingBtnEl.children, function (el) {
         el.addEventListener("click", function (e) {
@@ -65,7 +62,6 @@ if (feelingBtnEl) {
             const feelingButtons = document.querySelectorAll(".comment-feeling-buttons-wrap button");
             [].forEach.call(feelingButtons, function (e) {
                 e.classList.remove("clicked");
-                feelingInput.value = "just";
             });
             //새롭게 속성 추가
             e.target.classList.add("clicked");
