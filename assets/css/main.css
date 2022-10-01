@@ -27,6 +27,9 @@ a:link {
     text-decoration: none;
     color: black;
 }
+button {
+    color: black;
+}
 li,
 ul {
     list-style: none;
