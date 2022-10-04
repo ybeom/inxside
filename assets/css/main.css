@@ -1012,6 +1012,7 @@ fieldset {
     }
     .nav-wrap {
         display: inline-block;
+        height: 110px;
     }
     .nav-container {
         width: 100%;
@@ -1030,12 +1031,12 @@ fieldset {
     .loadmap {
         width: 600px;
         margin: 10px 0;
+        overflow: scroll;
     }
     .loadmap-image .route {
         left: 0;
     }
     .loadmap-image {
-        left: -600px;
         z-index: 100;
         margin: 0 auto;
     }
@@ -1082,8 +1083,8 @@ fieldset {
         min-width: 200px;
     }
     .container-fixed {
-        left: 0;
-        top: 0;
+        top: 170px;
+        left: 75px;
     }
     .gallery-container {
         height: 100%;
@@ -1109,6 +1110,7 @@ fieldset {
 @media (max-width: 700px) {
     .container {
         padding: 0;
+        max-width: 320px;
     }
     .home-container {
         margin-top: 130px;
@@ -1173,7 +1175,6 @@ fieldset {
         left: 0;
     }
     .loadmap-image {
-        left: -640px;
         width: 960px;
         height: 720px;
     }
