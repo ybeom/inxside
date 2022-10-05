@@ -3,16 +3,11 @@ const loadmapImageEl = document.querySelector(".loadmap-image");
 
 const htmlEl = document.querySelector("html");
 const containerEl = document.querySelector(".container");
-console.dir(loadmapEl);
-console.log(window.innerWidth);
 
 if (loadmapEl) {
     if (window.innerWidth < 1280 && window.innerWidth > 700) {
-        console.log(1);
-
         loadmapEl.scrollLeft = 600;
     } else if (window.innerWidth < 700) {
-        console.log(2);
         loadmapEl.scrollLeft = 700;
     }
 }
