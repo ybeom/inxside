@@ -48,7 +48,5 @@ staticman:
     repository: "inxside"
     branch: "main"
 
-analytics:
-    provider: "google-gtag"
-    google:
-        tracking_id: "G-84WB4HSG9D"
+google_analytics:
+    tracking_id: "G-84WB4HSG9D"
