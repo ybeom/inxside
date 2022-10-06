@@ -640,7 +640,7 @@ fieldset {
 .interest {
     background-color: #ffd702;
 }
-.excited {
+.awesome {
     background-color: #018c82;
 }
 .sad {
@@ -661,7 +661,7 @@ fieldset {
 .interest:hover {
     opacity: 0.8;
 }
-.excited:hover {
+.awesome:hover {
     opacity: 0.8;
 }
 .sad:hover {
@@ -813,7 +813,7 @@ fieldset {
 .interest-comment {
     color: #ffd702 !important;
 }
-.excited-comment {
+.awesome-comment {
     color: #018c82 !important;
 }
 .sad-comment {
@@ -831,7 +831,7 @@ fieldset {
 .interest-message {
     background-image: linear-gradient(180deg, transparent 0, #ffd70290 0, #ffd70290) !important;
 }
-.excited-message {
+.awesome-message {
     background-image: linear-gradient(180deg, transparent 0, #018c8290 0, #018c8290) !important;
 }
 .sad-message {

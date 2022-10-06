@@ -6,7 +6,7 @@ layout: default
     <div class="gallery-wrap">
         <article class="gallery-overview">
             <div class="gallery-logo"><img src="{{'/assets/images/logo.png' | relative_url }}" /></div>
-            <p>{{site.description}}<br /><strong>최인애</strong></p>
+            <p>{{site.description}}<br /></p>
         </article>
         {% for post in site.posts%}
         <a class="gallery-art-{{post.title}}" href="{{post.url | relative_url}}">
