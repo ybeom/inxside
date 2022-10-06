@@ -47,3 +47,8 @@ staticman:
     userName: "ybeom"
     repository: "inxside"
     branch: "main"
+
+analytics:
+    provider: "google-gtag"
+    google:
+        tracking_id: "G-84WB4HSG9D"
