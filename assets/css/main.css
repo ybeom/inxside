@@ -982,12 +982,15 @@ fieldset {
     .home-container {
         margin-top: 50px;
     }
+    .main-container {
+        max-width: 600px;
+    }
     .poster-image-container {
         width: 100%;
     }
     .poster-image-container .poster-door {
-        left: 320px;
-        top: 433px;
+        left: 260px;
+        top: 323px;
         width: 90px;
         height: 120px;
     }
@@ -996,8 +999,8 @@ fieldset {
         top: -430px;
     }
     .poster-image-container .door-inside {
-        left: 320px;
-        top: 433px;
+        left: 260px;
+        top: 323px;
         width: 90px;
         height: 120px;
     }
