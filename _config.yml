@@ -48,5 +48,9 @@ staticman:
     repository: "inxside"
     branch: "main"
 
-google_analytics:
-    tracking_id: "G-84WB4HSG9D"
+# Analytics
+analytics:
+    provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+    google:
+        tracking_id: "G-84WB4HSG9D"
+        anonymize_ip: # true, false (default)
